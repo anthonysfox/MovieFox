@@ -13,8 +13,16 @@
     }
 ?>
 
-
+<div class="row">
     <?php foreach($films['movies'] as $film) {
-        echo '<h2><a href="films.php?id=' . $film->MovID . '">' . $film->MovTitle . '</a></h2>';
+        echo '<div class="card col-sm-3">';
+        echo    '<img class="card-img-top img-fluid" src="' . $film->MovPosterPath . '">';
+        echo    '<div class="card-body">';
+        echo        '<h5 class="card-title"><a href="films.php?id=' . $film->MovID . '">' . $film->MovTitle . '</a></h2>';
+        echo    '</div>';
+        echo '</div>';
+        //echo '</div>';
     } 
     ?>
+</div>
+
