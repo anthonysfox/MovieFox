@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Ranga');
+
+body, html {
+    height: 100%;
+    background: #7887AB;
+}
+
+.background {
+    background:white;
+    background-image: url('./imgs/popcorn.jpg');
+    /* Full height */
+    height: 50%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.select-form {
+    margin-top: 10px;
+}
+.content {
+    margin-left: 20px;
+}
+
+.content h1 {
+    font-family: 'Ranga', cursive;
+    font-size: 4em;
+}
+
+.content p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.movies {
+    padding: 30px;
+    margin: 20px 0 60px 0;
+    border-radius: 10px 10px;
+    background:white;
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 4px 22px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 22px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 22px -1px rgba(0,0,0,0.75);
+}
+
+.card {
+    margin: 0 0 10px 0;
+}
+
+.card .imgs {
+    margin-top: 20px;
+}
+
+.card-title {
+    font-size: 2vh;
+}
+
+.film-details {
+    background: white;
+    padding: 10px;
+    border-radius: 10px 10px;
+    margin: 10px 0 60px 0;
+    display: grid;
+    grid-template-areas: 
+    "title title title"
+    "poster details details"
+    "videos videos videos";
+    grid-gap: 10px;
+    -webkit-box-shadow: 0px 4px 22px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 22px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 22px -1px rgba(0,0,0,0.75);
+}
+
+.poster {
+    grid-area: poster;
+}
+
+.information {
+    grid-area: details;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px 10px;
+}
+
+.youtube-videos {
+    grid-area: videos;
+}
+
+.movie-title {
+    grid-area: title;
+}
+
+iframe {
+    margin-right: 40px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #061539;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .film-details {
+        grid-template-areas: 
+        "title"
+        "poster"
+        "details"
+        "videos";
+    }
+}
