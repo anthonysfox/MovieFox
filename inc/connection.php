@@ -1,5 +1,8 @@
 <?php 
 
+    /**
+     * Purpose of this class is to instantiate a database object 
+     */
     class Connection {
         protected $hostname = 'localhost';
         protected $username = 'root';

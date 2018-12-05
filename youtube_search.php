@@ -1,12 +1,7 @@
 <?php
-  require 'Data.php';
+  require 'inc/functions.php';
+  include 'inc/header.php';
   $conn = new Data();
-
-  $arr = $conn->getMovies(9);
-
-  $data = [
-      'arr' => $arr
-  ];
 
 /**
  * Library Requirements
@@ -37,7 +32,7 @@ END;
 // This code will execute if the user entered a search query in the form
 // and submitted the form. Otherwise, the page displays the form above.
 if (isset($_GET['maxResults'])) {
-foreach($data['arr'] as $movTitle) {
+//foreach($data['arr'] as $movTitle) {
     echo $movTitle->MovTitle . ': ' . $movTitle->MovID . '<br>';
 
   /*
@@ -63,7 +58,7 @@ foreach($data['arr'] as $movTitle) {
       'maxResults' => $_GET['maxResults'],
     ));
 
-    echo '<h1>' . $search . '</h1>';
+    //echo '<h1>' . $search . '</h1>';
 
     // json from youtube 
     $response = json_encode($searchResponse);
@@ -78,7 +73,7 @@ foreach($data['arr'] as $movTitle) {
       switch ($searchResult['id']['kind']) {
         case 'youtube#video':
         try{
-          $conn->insertVideoData($videoID, $videoTitle, $movTitle->MovID);
+          //$conn->insertVideoData($videoID, $videoTitle, $movTitle->MovID);
           $videos .= sprintf('<iframe id="cartoonVideo" width="560" height="315" src="//www.youtube.com/embed/%s" frameborder="0" allowfullscreen></iframe><br><br>',
              $searchResult['id']['videoId'],$searchResult['snippet']['thumbnails']['medium']['url']);
           break;
@@ -104,15 +99,9 @@ END;
       htmlspecialchars($e->getMessage()));
   }
 }
-}
+//}
 ?>
 
-<!doctype html>
-<html>
-  <head>
-    <title>YouTube Search</title>
-  </head>
-  <body>
     <?=$htmlBody?>
-  </body>
-</html>
+
+<?php include 'inc/footer.php'; ?>

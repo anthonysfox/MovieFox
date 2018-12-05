@@ -16,7 +16,7 @@
     $pageTitle = $movieInfo['info']->MovTitle;
     
 ?>
-<?php include("inc/header.php"); ?>
+<?php include 'inc/header.php' ?>
     <div class="container">
     <div class="film-details">
             <h1 class="movie-title"><?php echo $movieInfo['info']->MovTitle; ?></h1>
@@ -42,4 +42,4 @@
     </div>
     </div>
 
-<?php include("inc/footer.php"); ?>
+<?php include 'inc/footer.php' ?>

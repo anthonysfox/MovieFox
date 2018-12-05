@@ -7,7 +7,7 @@ body, html {
 
 .background {
     background:white;
-    background-image: url('./imgs/popcorn.jpg');
+    background-image: url('../../imgs/popcorn.jpg');
     /* Full height */
     height: 50%; 
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo empty($pageTitle) ? 'Home' : $pageTitle ?> | MovieFox</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./inc/css/style.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -18,12 +18,6 @@
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="./index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Update Youtube Data</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./MovieAPI.php">Update Movie Data</a>
             </li>
         </ul>
     </div>

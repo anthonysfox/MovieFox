@@ -1,4 +1,4 @@
-<?php include('inc/header.php'); ?>
+<?php require 'inc/header.php'; ?>
     <header class="background">
         <div class="content">
             <h1>Welcome to MovieFox!</h1>
@@ -7,7 +7,7 @@
     </header>
     <div class="container">
         <div class="select-form">
-            <form>
+            <form onsubmit="showMovies()">
                 <select id="option">
                 <option value="">Select a Genre:</option>
                 <option value="1">Horror</option>
@@ -30,6 +30,6 @@
                 <input id="movieDisplay" type="submit" value="Submit">
             </form>
         </div>
-        <div class="movies" id="txtHint"><b>Movies will be listed here...</b></div>
-
-<?php include('inc/footer.php'); ?>
+        <div class="movies" id="movieList"><b>Movies will be listed here...</b></div>
+<script src="inc/js/index.js"></script>
+<?php require 'inc/footer.php'; ?>

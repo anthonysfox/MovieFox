@@ -1,8 +1,10 @@
 <?php 
     require 'inc/functions.php';
 
+    // create a new data object 
     $functions = new Data();
 
+    // getting variables from an AJAX request in js/index.js 
     if(isset($_POST['genre']) && isset($_POST['year'])) {
         $genre = $_POST['genre'];
         $year = $_POST['year'];
@@ -21,7 +23,6 @@
         echo        '<h5 class="card-title"><a href="films.php?id=' . $film->MovID . '">' . $film->MovTitle . '</a></h2>';
         echo    '</div>';
         echo '</div>';
-        //echo '</div>';
     } 
     ?>
 </div>
